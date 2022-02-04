@@ -1,0 +1,54 @@
+.landing-page {
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+
+    .landing {
+        &__logo {
+            font-size: 15rem;
+            letter-spacing: 7rem;
+            text-transform: uppercase;
+        }
+
+        &__tagline {
+            font-size: 3rem;
+            font-weight: 100;
+            margin: 1.5em 0;
+        }
+
+        &__cta {
+            border: 1px solid $white;
+            border-radius: 5em;
+            color: $white;
+            font-size: 1.5rem;
+            padding: 1em 2em;
+            margin: 2em 1em;
+            text-decoration: none;
+            -webkit-transition: all 0.5s ease;
+
+            &:hover {
+                background-color: invert($color: $black);
+                color: invert($color: $white);
+            }
+        }
+
+        &__how {
+            border-bottom: 1px solid $white;
+            color: $white;
+            font-size: 2rem;
+            margin-right: 1rem;
+            padding-bottom: 1rem;
+            text-decoration: none;
+            -webkit-transition: all 0.2s ease;
+
+            &:hover {
+                border-bottom: $black;
+            }
+        }
+    }
+}
