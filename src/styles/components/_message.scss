@@ -1,0 +1,83 @@
+.message {
+
+    &__list {
+        list-style-type: none;
+        min-width: 100%;
+
+    }
+
+    &__list-item {
+        background-color: $profileBGColor;
+        border-radius: 1.5em;
+        cursor: pointer;
+        padding: 2em;
+        margin-bottom: 1em;
+        -webkit-transition: all 0.1s linear;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: lighten($color: $profileBGColor, $amount: 10);
+        }
+    }
+
+    &__element {
+        align-items: center;
+        display: flex;
+    }
+
+    &__meta {
+        margin-bottom: .5em;
+        font-weight: bolder;
+    }
+
+    &__preview {
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+
+    &__avi {
+        display: inline-block;
+        border-radius: 50%;
+        height: 7em;
+        overflow: hidden;
+        margin-right: 3em;
+        width: 7em;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__input {
+        @extend .search__input;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    &__single {
+        background-color: $profileBGColor;
+        border-radius: 2em;
+        font-size: 1.3rem;
+        padding: 2em 4em;
+        margin-bottom: 1em;
+
+        &:hover {
+            background-color: lighten($color: $profileBGColor, $amount: 10);
+        }
+    }
+
+    &__single:nth-child(even) {
+        background-color: darken($color: $profileBGColor, $amount: 5);
+    }
+}

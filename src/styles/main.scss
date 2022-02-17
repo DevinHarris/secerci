@@ -1,10 +1,16 @@
+@import './abstracts/variables';
 @import './abstracts/base';
 @import './abstracts/typography';
-@import './abstracts/variables';
 
 @import './components/nav';
+@import './components/message';
+@import './components/profile';
+@import './components/profile_header';
+@import './components/search';
+@import './components/message_thread';
+@import './components/signup';
 
 @import './layouts/container';
+@import './layouts/layout';
 
 @import './pages/landing-page';
-@import './pages/profile-page';

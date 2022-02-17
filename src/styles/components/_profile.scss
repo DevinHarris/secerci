@@ -1,0 +1,18 @@
+.profile-page {
+    align-items: center;
+    background-color: $profilePageColor;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // padding: 6rem;
+    // height: 100%;
+
+    .profile {
+    
+        &__messages {
+            height: 70%;
+            min-width: 100%;
+        }
+    }
+}

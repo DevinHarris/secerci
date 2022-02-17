@@ -1,0 +1,17 @@
+.search {
+    width: 100%;
+
+    &__input {
+        background-color: lighten($color: $profileBGColor, $amount: 5);
+        border: none;
+        color: $white;
+        margin-bottom: 1rem;
+        padding: 1.5em;
+        width: 100%;
+
+        &:focus, &:active {
+            border: none;    
+            outline: none;
+        }
+    }
+}

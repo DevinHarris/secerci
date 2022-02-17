@@ -1,0 +1,17 @@
+.signup {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+
+    &__form {
+        margin: 0 auto;
+        min-width: 100%;
+    }
+
+    &__input {
+        display: block;
+        padding: 2rem;
+        min-width: 90%;
+    }
+}

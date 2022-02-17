@@ -10,7 +10,7 @@ const LandingPage = () => {
                 <p className="landing__tagline">a private encryption-based direct message app.</p>
                 <Link to="/how" className="landing__how">see how it works</Link>
                 <Link to="/join" className="landing__cta">Join</Link>
-                <Link to="/profile/dvnchnc" className="landing__cta">Login</Link>
+                <Link to="/profile" className="landing__cta">Login</Link>
             </div>
         </div>
     )
