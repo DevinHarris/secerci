@@ -1,26 +1,38 @@
 const express = require('express');
 const apiRoutes = express.Router();
+const User = require('../models/User');
 
-apiRoutes.route('/api').get((req, res) => {
+apiRoutes.get('/api', (req, res) => {
     res.send({
         message: 'API route!'
     })
 })
 
-apiRoutes.route('/api/users').get((req, res) => {
-    res.send({
-        message: 'All users'
-    })
+apiRoutes.get('/api/users', (req, res) => {
+    User.find().then(users => {
+        if (!users) {
+            res.send({
+                message: 'User not found'
+            })
+        } else {
+            res.json(users)
+        }
+    }).catch(err => console.log(err));
 })
 
-apiRoutes.route('/api/users/:id').get((req, res) => {
-    res.json({
-        user: {
-            name: 'Devin Chance',
-            username: 'dvnchnc',
-            messages: []
+apiRoutes.get('/api/users/:id', (req, res) => {
+    const { params } = req;
+
+    User.findOne({ username: params.id }).then(user => {
+        if (!user) {
+            console.log(`User not found`)
+        } else {
+            console.log(user);
+
+            res.json(user);
         }
-    })
+    }).catch(err => console.log(err));
+
 })
 
 module.exports = apiRoutes;

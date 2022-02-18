@@ -1,0 +1,15 @@
+@mixin avi($height, $width) {
+
+    display: inline-block;
+    border-radius: 50%;
+    height: $height;
+    overflow: hidden;
+    margin-right: 3em;
+    width: $width;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

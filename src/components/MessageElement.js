@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
+import Avatar from "./Avatar";
 
 const MessageElement = ({ messages }) => {
 
@@ -14,9 +15,7 @@ const MessageElement = ({ messages }) => {
                 <li key={message.id} className="message__list-item" onClick={() => dispatch({ type: 'messages/getMessage', payload: message.id })}>
                     <Link to={`/message/${message.id}`}>
                         <span className="message__element">
-                            <span className="message__avi">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Universal_Champion_Roman_Reigns_WWE_Live_event_01-23-2022.jpeg" alt={message.name} />
-                            </span>
+                            <Avatar src={message.avi} alt={`${message.name}-avatar`}/>
                             <span>
                                 <h2 className="message__meta">{message.name} - {message.timeStamp}</h2>
                                 <p className="message__preview">{message.message}</p>

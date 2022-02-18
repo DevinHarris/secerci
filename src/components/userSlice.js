@@ -14,12 +14,19 @@ export const userSlice = createSlice({
                     "date": "20 mins ago"
                 }
             ]
-        }
+        },
+
+        isSignedIn: false
     },
 
+
     reducers: {
-        getUser: (state, payload) => {
-            state.user = payload.user
+        getUser: (state, action) => {
+            state.user = action.payload.user
+        },
+
+        isSignedIn: (state, action) => {
+            state.isSignedIn = !state.isSignedIn;
         }
     }
 })
