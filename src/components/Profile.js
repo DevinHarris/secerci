@@ -10,8 +10,6 @@ const Profile = ({ profileData }) => {
     const { avatar, username, name } = profileData;
     const { messages, user } = useSelector(state => state);
 
-    console.log(user);
-
     // useEffect(() => {
     //     // dispatch({ type: 'messages/getMessages' });
 

@@ -13,7 +13,7 @@ const MessageElement = ({ messages }) => {
            {
                messages.map(message => (
                 <li key={message.id} className="message__list-item" onClick={() => dispatch({ type: 'messages/getMessage', payload: message.id })}>
-                    <Link to={`/message/${message.id}`}>
+                    <Link to={`/thread/${message.id}`}>
                         <span className="message__element">
                             <Avatar src={message.avi} alt={`${message.name}-avatar`}/>
                             <span>

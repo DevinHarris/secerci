@@ -1,13 +1,15 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav = () => {
+    const { user } = useSelector(state => state.user)
     const location = useLocation();
 
     return (
         <nav className="navbar">
            {
-               location.pathname === "/" ? (
+               location.pathname === "/" && !user.isSignedIn ? (
                     <ul>
                         <li className="navbar__link">
                             <NavLink to="/about">About</NavLink>
@@ -22,7 +24,7 @@ const Nav = () => {
                             <NavLink to="faqs">FAQs</NavLink>
                         </li>
                  </ul>
-               ) : <NavLink to="/profile">
+               ) : <NavLink to="/">
                    <h2 className="navbar__logo">Secreci</h2>
                </NavLink>
            }

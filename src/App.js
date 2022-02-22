@@ -7,6 +7,7 @@ import Profile from "./components/Profile";
 import MessagePage from "./components/MessagePage";
 import SignupPage from "./components/SignUpPage";
 import SignupSuccess from "./components/SignupSuccess";
+import LoginPage from "./components/LoginPage";
 import data from './data.json';
 
 const App = () => {
@@ -17,11 +18,12 @@ const App = () => {
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={ user.isSignedIn ? <Profile profileData={{ ...user  }} /> : <LandingPage /> } />
                     <Route exact path="/profile" element={<Profile profileData={{...user}} />} />
                     <Route exact path="/join" element={<SignupPage />} />
-                    <Route exact path="/message/:id" element={<MessagePage />} />
+                    <Route exact path="/thread/:id" element={<MessagePage />} />
                     <Route exact path="/join/success" element={<SignupSuccess />} />
+                    <Route exact path="/login" element={<LoginPage />} />
                 </Routes>
             </Layout>
         </BrowserRouter>
