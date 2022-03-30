@@ -8,7 +8,7 @@ const Search = () => {
 
     return (
         <div className="search">
-            <input className="search__input" type="text" placeholder="Search messages" onChange={(e) => dispatch({ type: 'messages/searchMessages', payload: e.target.value })} />
+            <input className="search__input" type="text" placeholder="Search messages" onChange={(e) => dispatch({ type: 'search/getSearchTerm', payload: e.target.value })} />
         </div>
     )
 }

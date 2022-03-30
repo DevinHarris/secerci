@@ -8,6 +8,7 @@ import MessagePage from "./components/MessagePage";
 import SignupPage from "./components/SignUpPage";
 import SignupSuccess from "./components/SignupSuccess";
 import LoginPage from "./components/LoginPage";
+import SendPage from "./components/SendPage";
 import data from './data.json';
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
                     <Route exact path="/thread/:id" element={<MessagePage />} />
                     <Route exact path="/join/success" element={<SignupSuccess />} />
                     <Route exact path="/login" element={<LoginPage />} />
+                    <Route exact path="/new" element={<SendPage />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

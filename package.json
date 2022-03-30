@@ -14,8 +14,10 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
     "mongodb": "^4.3.1",
     "mongoose": "^6.2.2",
+    "nanoid": "^3.3.1",
     "passport": "^0.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -32,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "nodemon ./server/server.js"
   },
   "eslintConfig": {
     "extends": [

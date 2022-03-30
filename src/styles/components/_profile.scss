@@ -14,5 +14,25 @@
             height: 70%;
             min-width: 100%;
         }
+
+        &__send-message {
+             margin-top: 3em;
+
+            a {
+                background-color: $white;
+                border: 1px solid $white;
+                border-radius: 5em;
+                color: $black;
+                font-size: 1.2rem;
+                padding: 1em 2em;
+                text-decoration: none;
+                -webkit-transition: all 1s ease;
+
+                &:hover {
+                    background-color: $black;
+                    color: $white
+                }
+            }
+        }
     }
 }

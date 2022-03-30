@@ -17,11 +17,24 @@ const UserSchema = new Schema({
     token: {
         type: String
     },
-    messages: [{
-        from: String,
-        thread: Array,
-        date: Date
-    }]
+
+    messages: {
+        type: Array,
+        ref: 'Message' 
+    }
+    // messages: [{
+    //     threads: [
+    //         {
+    //             id: Number,
+    //             from: {
+    //                 name: String,
+    //                 username: String,
+    //                 date: Date
+    //             },
+    //             messages: Array
+    //         }
+    //     ]
+    // }]
 })
 
 module.exports = mongoose.model('User', UserSchema);

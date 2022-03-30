@@ -13,7 +13,7 @@ const LoginPage = () => {
     const handleOnSubmit = (data) => {
         axios.post('http://localhost:5000/auth/login', data).then(response => {
             dispatch({ type: 'user/setUser', payload: response.data })
-            navigate('/profile')
+            navigate('/');
         }).catch(err => {
             console.log(err);
         })

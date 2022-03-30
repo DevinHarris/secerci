@@ -35,4 +35,12 @@ apiRoutes.get('/api/users/:id', (req, res) => {
 
 })
 
+apiRoutes.put('/api/send', (req, res) => {
+    const { recipient } = req.body;
+
+    User.findOne({ username: recipient }).then(user => {
+        console.log(user);
+    })
+})
+
 module.exports = apiRoutes;

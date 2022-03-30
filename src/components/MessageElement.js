@@ -12,15 +12,15 @@ const MessageElement = ({ messages }) => {
             <ul className="message__list">
            {
                messages.map(message => (
-                <li key={message.id} className="message__list-item" onClick={() => dispatch({ type: 'messages/getMessage', payload: message.id })}>
-                    <Link to={`/thread/${message.id}`}>
+                <li key={message.threadId} className="message__list-item" onClick={() => dispatch({ type: 'user/setCurrentMessage', payload: message.threadId })}>
+                    <Link to={`/thread/${message.threadId}`}>
                         <span className="message__element">
-                            <Avatar src={message.avi} alt={`${message.name}-avatar`}/>
+                        <Avatar src={message.avi} alt={`${message.name}-avatar`}/>
                             <span>
-                                <h2 className="message__meta">{message.name} - {message.timeStamp}</h2>
-                                <p className="message__preview">{message.message}</p>
+                                <h2 className="message__meta">{message.messages[0].from.name} - {message.timeStamp}</h2>
+                                <p className="message__preview">{message.messages[0].message}</p>
                             </span>
-                    </span>
+                        </span>
                     </Link>
                 </li>
                ))
