@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import axios from 'axios';
+import api from '../api';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useLocation, Link, useParams } from 'react-router-dom'; 
@@ -22,7 +22,7 @@ const SendMessage = () => {
                 username: user.username
             }
         }
-        axios.put('http://localhost:5000/api/send', dataToSend).then(response => {
+        api.put('/api/send', dataToSend).then(response => {
             const { data } = response;
             console.log(data)
             dispatch({ type: 'user/sendMessage', payload: data })

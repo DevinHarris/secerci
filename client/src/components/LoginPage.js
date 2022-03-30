@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import axios from 'axios';
+import api from '../api';
 
 const LoginPage = () => {
 
@@ -11,7 +11,7 @@ const LoginPage = () => {
     const navigate = useNavigate();
 
     const handleOnSubmit = (data) => {
-        axios.post('http://localhost:5000/auth/login', data).then(response => {
+        api.post('/auth/login', data).then(response => {
             dispatch({ type: 'user/setUser', payload: response.data })
             navigate('/');
         }).catch(err => {

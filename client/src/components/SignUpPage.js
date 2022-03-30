@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import api from '../api';
 
 const SignupPage = () => {
 
@@ -11,7 +11,7 @@ const SignupPage = () => {
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/auth/signup', data).then(response => {
+        api.post('/auth/signup', data).then(response => {
             console.log(response);
 
             if (response.status === 200 || response.status === 201) {
