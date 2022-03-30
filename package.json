@@ -1,13 +1,14 @@
 {
-  "name": "secreci",
-  "version": "0.1.0",
-  "private": true,
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+
   "dependencies": {
-    "@reduxjs/toolkit": "^1.7.2",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -19,40 +20,14 @@
     "mongoose": "^6.2.2",
     "nanoid": "^3.3.1",
     "passport": "^0.5.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.27.0",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
-    "redux-thunk": "^2.4.1",
-    "sass": "^1.49.7",
-    "socket.io": "^4.4.1",
-    "web-vitals": "^2.1.4"
+    "socket.io": "^4.4.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "serve": "nodemon ./server/server.js"
+
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.7"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  
+  "author": "",
+  "license": "ISC"
 }
